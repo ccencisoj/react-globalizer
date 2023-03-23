@@ -24,7 +24,7 @@ export const useCounterState = createGlobalState({
 });
 ```
 
-Y, posteriormente, lo usas de igual de forma como cualquier hook.
+Y, posteriormente, lo usas de igual manera que un hook.
 
 ``` typescript
 // CounterView/CounterView.jsx
@@ -62,14 +62,14 @@ export const CounterView = () => {
 };
 ```
 
+## Creditos
+
+Este paquete esta basado en el administrador de estado [zustand](https://www.npmjs.com/package/zustand). 
+
 ## Recursos adicionales
 
 - ¿Buscas algo a nivel de vista? No dudes en probar [react-view-state](https://www.npmjs.com/package/react-view-state)
 - ¿Estas presentando problemas? Abre un hilo en [github issues](https://github.com/ccencisoj/react-globalizer/issues)
-
-## Creditos
-
-Este paquete esta basado en el administrador de estado [zustand](https://www.npmjs.com/package/zustand). Por detras
 
 ## License
 
