@@ -2,7 +2,7 @@
 
 👋 Are you looking for an easy and elegant solution for managing global state in React? If so, you've come to the perfect place! 🎉
 
-With react-globalizer, you simply define global state using "createGlobalState" and access it from anywhere in your application.
+With react-globalizer, you simply define global state using "createState" and access it from anywhere in your application.
 You can define as many global states as you want: one state for each model, view, layout, or anything else you can think of.
 Additionally, you're free to load objects, functions, and components into the state. 🔥
 
@@ -16,46 +16,34 @@ npm install react-globalizer
 Next, you define the state (for this example, a counter).
 
 ``` typescript
-// CounterView/hooks/useCounterState.jsx
-import { createGlobalState } from "react-globalizer";
+import { createState } from "react-globalizer";
 
-export const useCounterState = createGlobalState({
-  withInitialState: { counter: 0 },
-});
+const useCounter = createState(0);
 ```
 
 Then, you can use it just like any other hook.
 
 ``` typescript
-// CounterView/CounterView.jsx
-import styles from "./styles.module.scss";
-import { useCounterState } from "./useCounterState.jsx";
+// ...
 
 export const CounterControls = () => {
-  const [counterState, setCounterState] = useCounterState();
+  const [counter, setCounter, resetCounter] = useCounter();
 
   return (
-    <div className={styles.counter_controls}>
-      <button
-        onClick={() => setCounterState({ counter: counterState.counter + 1 })}
-      >
-        Increment counter
-      </button>
-      <button
-        onClick={() => setCounterState({ counter: counterState.counter - 1 })}
-      >
-        Decrement counter
-      </button>
+    <div>
+      <button onClick={() => setCounter(counter + 1)}>Increment</button>
+      <button onClick={() => setCounter(counter - 1)}>Decrement</button>
+      <button onClick={() => resetCounter()}>Reset</button>
     </div>
   );
 };
 
 export const CounterView = () => {
-  const [counterState] = useCounterState();
+  const [counter] = useCounter();
 
   return (
-    <div className={styles.counter_view}>
-      <p>Counter: {counterState.counter}</p>
+    <div>
+      <p>Counter: {counter}</p>
       <CounterControls />
     </div>
   );
