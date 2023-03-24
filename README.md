@@ -62,12 +62,12 @@ export const CounterView = () => {
 };
 ```
 
-## Recursos adicionales
+## Additional Resources
 
 - Looking for something at the view level? Don't hesitate to try [react-view-state](https://www.npmjs.com/package/react-view-state)
 - Running into issues? Open a thread on [github issues](https://github.com/ccencisoj/react-globalizer/issues)
 
-## Creditos
+## Credits
 
 This package is based on the state manager [zustand](https://www.npmjs.com/package/zustand). 
 
