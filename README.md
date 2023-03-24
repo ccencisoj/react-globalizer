@@ -1,4 +1,4 @@
-# react-globalizer
+![logo](./images/logo.png)
 
 👋 Are you looking for an easy and elegant solution for managing global state in React? If so, you've come to the perfect place! 🎉
 
