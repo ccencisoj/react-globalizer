@@ -1,15 +1,19 @@
 import { create } from "zustand";
-import { UseGlobalState } from "./types";
 
-export function createGlobalState<State extends { [key: string]: any }>({
-  withInitialState,
-}: {
-  withInitialState: State;
-}) {
-  const globalState = create(() => withInitialState);
-  const useGlobalState: UseGlobalState<State> = () => [
-    globalState(),
-    globalState.setState,
-  ];
-  return useGlobalState;
+export function createState(initialState: any) {
+  const globalState = create(() => initialState);
+
+  const setState = (state: any) => {
+    globalState.setState(state);
+  };
+
+  const resetState = () => {
+    globalState.setState(initialState);
+  };
+
+  const useState = () => {
+    return [globalState(), setState, resetState];
+  };
+
+  return useState;
 }

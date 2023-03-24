@@ -1,5 +1,5 @@
 declare module "react-globalizer" {
-  export function createGlobalState<State extends { [key: string]: any }>(ob: {
-    withInitialState: State;
-  }): () => [State, (state: Partial<State>) => void];
+  export function createState<State extends { [key: string]: any }>(
+    initialState: State
+  ): () => [State, (state: Partial<State>) => void, () => void];
 }
