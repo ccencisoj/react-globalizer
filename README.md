@@ -1,19 +1,19 @@
 # react-globalizer
 
-👋 ¿Estás buscando una solución fácil y elegante para administrar el estado global en React? Si es así, ¡has llegado al lugar ideal! 🎉
+👋 Are you looking for an easy and elegant solution for managing global state in React? If so, you've come to the perfect place! 🎉
 
-Con react-globalizer, simplemente defines el estado global usando "createGlobalState" y accedes a él desde cualquier lugar de tu aplicación.
-Puedes definir tantos estados globales como quieras: un estado para cada modelo, vista, layout, o para cualquier cosa que se te ocurra. 
-Además, eres libre de cargar objetos, funciones y componentes en el estado. 🔥
+With react-globalizer, you simply define global state using "createGlobalState" and access it from anywhere in your application.
+You can define as many global states as you want: one state for each model, view, layout, or anything else you can think of.
+Additionally, you're free to load objects, functions, and components into the state. 🔥
 
-## Getting started
-Para comenzar a usarlo, primero tienes que instalarlo.
+## Getting Started
+To start using it, you first need to install it.
 
 ``` shell
 npm install react-globalizer
 ```
 
-Luego defines el estado (para este ejemplo un contador).
+Next, you define the state (for this example, a counter).
 
 ``` typescript
 // CounterView/hooks/useCounterState.jsx
@@ -24,7 +24,7 @@ export const useCounterState = createGlobalState({
 });
 ```
 
-Y, posteriormente, lo usas de igual manera que un hook.
+Then, you can use it just like any other hook.
 
 ``` typescript
 // CounterView/CounterView.jsx
@@ -62,36 +62,17 @@ export const CounterView = () => {
 };
 ```
 
-## Creditos
-
-Este paquete esta basado en el administrador de estado [zustand](https://www.npmjs.com/package/zustand). 
-
 ## Recursos adicionales
 
-- ¿Buscas algo a nivel de vista? No dudes en probar [react-view-state](https://www.npmjs.com/package/react-view-state)
-- ¿Estas presentando problemas? Abre un hilo en [github issues](https://github.com/ccencisoj/react-globalizer/issues)
+- Looking for something at the view level? Don't hesitate to try [react-view-state](https://www.npmjs.com/package/react-view-state)
+- Running into issues? Open a thread on [github issues](https://github.com/ccencisoj/react-globalizer/issues)
+
+## Creditos
+
+This package is based on the state manager [zustand](https://www.npmjs.com/package/zustand). 
+
 
 ## License
 
 MIT License
-
-Copyright (c) 2023 Cristian Enciso
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 
