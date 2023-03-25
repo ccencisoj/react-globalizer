@@ -6,6 +6,8 @@ With react-globalizer, you simply define global state using "createState" and ac
 You can define as many global states as you want: one state for each model, view, layout, or anything else you can think of.
 Additionally, you're free to load objects, functions, and components into the state. 🔥
 
+Not convinced yet? Check out the [demo](https://codesandbox.io/p/sandbox/react-globallizer-counter-example-w9t9tf?file=%2Fpages%2Findex.jsx&selection=%5B%7B%22endColumn%22%3A34%2C%22endLineNumber%22%3A18%2C%22startColumn%22%3A34%2C%22startLineNumber%22%3A18%7D%5D)
+
 ## Getting Started
 To start using it, you first need to install it.
 
